@@ -1080,10 +1080,26 @@ function openModal(id){
     }, 1600);
   });
 
-  // Deep-link: reflect the open challenge in the URL hash so the page is shareable
-  if(window.location.hash !== '#' + c.id){
-    try { history.replaceState(null, '', '#' + c.id); } catch(e){}
-  }
+  // Deep-link: reflect the open challenge in the URL as a clean, SEO-friendly
+  // path (/c/<ID>.html) rather than a hash fragment. The same static page
+  // exists on disk, so refreshing/copy-pasting the URL always works.
+  try {
+    const path = window.location.pathname;
+    const basePath = path
+      .replace(/\/c\/[^/]+\.html$/, '/')
+      .replace(/\/[^/]+\.html$/, '/');
+    const target = basePath + 'c/' + c.id + '.html';
+    // Strip the ephemeral ?c=<ID> param (used only by static-page hand-off);
+    // preserve any other query params the user might have.
+    const search = (window.location.search || '')
+      .replace(/([?&])c=[^&]*(&|$)/, (_, p, q) => q === '&' ? p : (p === '?' ? '' : ''))
+      .replace(/\?$/, '');
+    const currentFull = window.location.pathname + window.location.search + window.location.hash;
+    const targetFull = target + search;
+    if (currentFull !== targetFull) {
+      history.replaceState({id: c.id}, '', targetFull);
+    }
+  } catch(e){}
 
   document.getElementById('overlay').classList.add('open');
   document.getElementById('modal').scrollTop = 0;
@@ -1105,10 +1121,15 @@ function agDotColor(a){
 function closeModal(){
   document.getElementById('overlay').classList.remove('open');
   document.body.style.overflow = '';
-  // Clear hash so the current URL no longer points at a specific challenge
-  if(window.location.hash){
-    try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch(e){}
-  }
+  // Reset the URL to the app root (strip /c/<ID>.html and any lingering hash),
+  // so the address bar no longer advertises a specific challenge.
+  try {
+    const path = window.location.pathname;
+    const basePath = path.replace(/\/c\/[^/]+\.html$/, '/');
+    if (basePath !== path || window.location.hash) {
+      history.replaceState(null, '', basePath + window.location.search);
+    }
+  } catch(e){}
 }
 
 document.getElementById('mclose').onclick = closeModal;
@@ -1218,35 +1239,42 @@ render();
   document.head.appendChild(script);
 })();
 
-// Deep-link routing: open a challenge modal if the URL contains #CHALLENGE-ID
+// Deep-link routing: open a challenge modal for URLs shaped as
+//   /c/<ID>.html       (clean SEO path, preferred)
+//   ?c=<ID>            (query param, used by static pages' "Open in full navigator" CTA)
+//   #<ID>              (legacy hash form, kept for backward compatibility)
 (function(){
-  function openFromHash(){
-    const raw = (window.location.hash || '').replace(/^#/, '').trim();
-    if(!raw) return;
-    // decode in case the id was URL-encoded (it shouldn't be, but be safe)
-    let id = raw;
-    try { id = decodeURIComponent(raw); } catch(e){}
-    if(IDX[id]){
+  function idFromLocation(){
+    // 1. Path match: /c/<ID>.html
+    const pm = window.location.pathname.match(/\/c\/([^/]+)\.html$/);
+    if(pm){ try { return decodeURIComponent(pm[1]); } catch(e){ return pm[1]; } }
+    // 2. Query param ?c=<ID>
+    const qm = window.location.search.match(/[?&]c=([^&#]+)/);
+    if(qm){ try { return decodeURIComponent(qm[1]); } catch(e){ return qm[1]; } }
+    // 3. Hash #<ID>
+    const h = (window.location.hash || '').replace(/^#/, '').trim();
+    if(h){ try { return decodeURIComponent(h); } catch(e){ return h; } }
+    return '';
+  }
+  function openFromLocation(){
+    const id = idFromLocation();
+    if(id && IDX[id]){
       openModal(id);
     }
   }
   // On initial load
-  openFromHash();
-  // Support browser back/forward nav between challenges
+  openFromLocation();
+  // Browser back/forward navigation
+  window.addEventListener('popstate', openFromLocation);
   window.addEventListener('hashchange', () => {
     const overlayOpen = document.getElementById('overlay').classList.contains('open');
-    const raw = (window.location.hash || '').replace(/^#/, '').trim();
-    if(!raw && overlayOpen){
-      // Hash cleared externally -> close modal (closeModal is a no-op on hash since it's already empty)
+    const id = idFromLocation();
+    if(!id && overlayOpen){
       document.getElementById('overlay').classList.remove('open');
       document.body.style.overflow = '';
       return;
     }
-    if(raw){
-      let id = raw;
-      try { id = decodeURIComponent(raw); } catch(e){}
-      if(IDX[id]) openModal(id);
-    }
+    if(id && IDX[id]) openModal(id);
   });
 })();
 </script>
