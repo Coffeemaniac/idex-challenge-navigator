@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DISC14-20 · Development of an autonomous and portable Drone Interception System (The &quot;Drone Catcher&quot;) for artillery guns — DISC 14 | iDEX Challenge Navigator</title>
+<meta name="description" content="Design and development of a robust, responsive and field deployable drone catcher system, integrated with artillery guns that can detect, track and neutralize drones at short to medium ranges in complex battlefield environment, including contested…">
+<meta name="keywords" content="DISC14-20, DISC 14, Indian Army, iDEX challenge, India defence innovation, defence startup India, AI/ML, Drones/UAS, Ammunition, Electronic Warfare, Radar/Sensors, Robotics, Aviation, Cyber/Software, Materials">
+<meta name="author" content="iDEX Challenge Navigator">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f5a623">
+<link rel="canonical" href="https://coffeemaniac.github.io/idex-challenge-navigator/c/DISC14-20.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://coffeemaniac.github.io/idex-challenge-navigator/c/DISC14-20.html">
+<meta property="og:title" content="DISC14-20 — Development of an autonomous and portable Drone Interception System (The &quot;Drone …">
+<meta property="og:description" content="Design and development of a robust, responsive and field deployable drone catcher system, integrated with artillery guns that can detect, track and neutralize drones at short to medium ranges in complex battlefield environment, including contested…">
+<meta property="og:site_name" content="iDEX Challenge Navigator">
+<meta property="og:locale" content="en_IN">
+<meta property="article:section" content="DISC 14">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DISC14-20 — Development of an autonomous and portable Drone Interception System (The &quot;Drone …">
+<meta name="twitter:description" content="Design and development of a robust, responsive and field deployable drone catcher system, integrated with artillery guns that can detect, track and neutralize drones at short to medium ranges in complex battlefield environment, including contested…">
+
+<!-- Breadcrumbs for rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"iDEX Challenge Navigator","item":"https://coffeemaniac.github.io/idex-challenge-navigator/"},
+    {"@type":"ListItem","position":2,"name":"DISC 14","item":"https://coffeemaniac.github.io/idex-challenge-navigator/?prog=DISC+14"},
+    {"@type":"ListItem","position":3,"name":"DISC14-20"}
+  ]
+}
+</script>
+
+<!-- CreativeWork describing this problem statement -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Development of an autonomous and portable Drone Interception System (The \"Drone Catcher\") for artillery guns",
+  "identifier": "DISC14-20",
+  "url": "https://coffeemaniac.github.io/idex-challenge-navigator/c/DISC14-20.html",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "DISC 14",
+    "url": "https://coffeemaniac.github.io/idex-challenge-navigator/"
+  },
+  "publisher": {
+    "@type": "GovernmentOrganization",
+    "name": "Innovations for Defence Excellence (iDEX), Defence Innovation Organisation, Ministry of Defence, Government of India",
+    "url": "https://idex.gov.in/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "name": "Indian Army"
+  },
+  "description": "Design and development of a robust, responsive and field deployable drone catcher system, integrated with artillery guns that can detect, track and neutralize drones at short to medium ranges in complex battlefield environment, including contested electromagnetic spectrum and dense clutter. Proliferation of low-cost, high-performance drones has created a significant security gap for critical infrastructure. Conventional \"hard-kill\" solutions (lasers, projectiles) risk collateral damage from…",
+  "keywords": "AI/ML, Drones/UAS, Ammunition, Electronic Warfare, Radar/Sensors, Robotics, Aviation, Cyber/Software, Materials"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#080b14;--bg2:#0d1120;--bg3:#111827;--amber:#f5a623;--cyan:#00d4ff;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--border:rgba(245,166,35,.15)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Rajdhani',sans-serif;background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh;padding:2rem 1.25rem 5rem}
+main{max-width:880px;margin:0 auto}
+header.tophead{border-bottom:1px solid var(--border);padding-bottom:1.2rem;margin-bottom:2rem}
+header.tophead .crumbs{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+header.tophead .crumbs a{color:var(--amber);text-decoration:none}
+header.tophead .crumbs a:hover{text-decoration:underline}
+header.tophead h1{font-size:1.65rem;line-height:1.25;color:var(--text);margin:.3rem 0 .85rem;font-weight:600}
+.cta{display:inline-block;background:var(--amber);color:#000;font-family:'Share Tech Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;padding:10px 16px;border-radius:4px;text-decoration:none;font-weight:600;margin-top:.4rem;transition:all .15s}
+.cta:hover{background:#ffc85e;box-shadow:0 0 18px rgba(245,166,35,.5)}
+.cta-alt{display:inline-block;color:var(--cyan);font-family:'Share Tech Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;padding:10px 14px;margin-left:.5rem;text-decoration:none;border:1px solid rgba(0,212,255,.3);border-radius:4px}
+.cta-alt:hover{border-color:var(--cyan);background:rgba(0,212,255,.08)}
+.meta-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.pill{font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:3px;border:1px solid var(--border);color:var(--text2);background:var(--bg2)}
+.pill-prog{color:var(--amber);border-color:rgba(245,166,35,.4)}
+.pill-ag{color:var(--cyan);border-color:rgba(0,212,255,.3)}
+section{margin:1.3rem 0}
+section h2{font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:.55rem;padding-bottom:.35rem;border-bottom:1px solid rgba(245,166,35,.15)}
+.content-box{background:var(--bg2);border-left:2px solid var(--amber);padding:.9rem 1.1rem;border-radius:3px;color:var(--text);font-size:.97rem}
+.info-box{background:var(--bg2);padding:.8rem 1rem;border-radius:3px;color:var(--text2);font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.tag{background:rgba(0,212,255,.1);color:var(--cyan);font-family:'Share Tech Mono',monospace;font-size:.6rem;padding:3px 8px;border-radius:2px;letter-spacing:.1em;text-transform:uppercase}
+.muted{color:var(--text3);font-size:.88rem}
+.muted a{color:var(--cyan);text-decoration:none}
+.muted a:hover{text-decoration:underline}
+footer.botbar{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-family:'Share Tech Mono',monospace;font-size:.65rem;color:var(--text3);letter-spacing:.1em}
+footer.botbar a{color:var(--text2);text-decoration:none;margin:0 .4rem}
+footer.botbar a:hover{color:var(--amber)}
+nav.adjacent{display:flex;gap:.75rem;margin-top:1.5rem;flex-wrap:wrap}
+nav.adjacent a{flex:1;min-width:240px;padding:.7rem .9rem;background:var(--bg2);border:1px solid var(--border);border-radius:3px;color:var(--text2);text-decoration:none;font-size:.82rem;transition:all .15s}
+nav.adjacent a:hover{border-color:var(--amber);color:var(--text)}
+nav.adjacent .nav-lbl{display:block;font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:.2rem}
+@media (max-width:640px){header.tophead h1{font-size:1.3rem} .cta,.cta-alt{display:block;width:100%;margin:.4rem 0;text-align:center}}
+</style>
+</head>
+<body>
+<main>
+  <header class="tophead">
+    <div class="crumbs"><a href="../">iDEX Navigator</a> / DISC 14 / DISC14-20</div>
+    <h1>Development of an autonomous and portable Drone Interception System (The &quot;Drone Catcher&quot;) for artillery guns</h1>
+    <a class="cta" href="../#DISC14-20">Open in full navigator →</a>
+    <a class="cta-alt" href="../">Browse all 209 challenges</a>
+  </header>
+
+  <article>
+    <div class="meta-row">
+      <span class="pill pill-prog">DISC 14</span>
+      <span class="pill pill-ag">Indian Army</span>
+      <span class="pill pill-id">DISC14-20</span>
+      <span class="pill pill-num">PS 20</span>
+    </div>
+<section><h2>Problem Statement</h2><div class="content-box">Design and development of a robust, responsive and field deployable drone catcher system, integrated with artillery guns that can detect, track and neutralize drones at short to medium ranges in complex battlefield environment, including contested electromagnetic spectrum and dense clutter.</div></section>
+<section><h2>Challenge Brief / Definition</h2><div class="content-box">Proliferation of low-cost, high-performance drones has created a significant security gap for critical infrastructure.<br>Conventional &quot;hard-kill&quot; solutions (lasers, projectiles) risk collateral damage from falling debris, while &quot;soft-kill&quot;<br>(jamming) is often legally restricted and ineffective against autonomous, GPS-independent drones. There is an urgent need for a physical capture solution that secures the threat while preserving it for forensic analysis. The challenge seeks development of integrated drone catcher system tailored for artillery guns deployment, capable of protecting gun positions from Unmanned Aerial Systems and Loitering Munitions.</div></section>
+<section><h2>Existing Solution</h2><div class="info-box">(if Current Solutions &amp; Limitations threats and are often not cost effective or responsive against swarms or slow, low altitude drones.<br>· Man portable air defence systems are expensive per engagement and have limited utility against swarms or low altitude drones.<br>· Existing jamming based solutions can be limited by line of sight, frequency agility of hostile drones, collateral interference to friendly systems and lack of precise kill assessment.<br>There is limited capability for integrated, automated and localized protection specifically for dispersed and frequently relocating artillery gun positions.</div></section>
+<section><h2>Technology Domains</h2><div class="info-box">· Mechanical &amp; Aerospace : Rapid-deployment launchers, aerodynamic projectiles, high-strength and light-weight capturing devices.<br>· Robotics &amp; Autonomous Systems : Navigation in GPS- denied environment, swarm coordination, dynamic path planning.<br>· Computer Vision &amp; AI : Micro-doppler classification, predictive tracking, edge processing.<br>· Material Science : High-tenacity polymers, chemical entanglement options, shock-absorbing shells.<br>Command, Control &amp; Communication : Sensor fusion dashboards, augmented reality tracking, evidence encryption.<br>· Clear scalability path from single gun deployment to</div></section>
+<section><h2>Application / Use Case</h2><div class="info-box">· Close protection of towed and self-propelled artillery guns, mortars and MBRLs deployed in field, desert, high altitude and semi urban environments from drones, swarms and loiter munitions.<br>· Protection against reconnaissance drones, loitering munitions and swarm drones attempting to locate, track or engage artillery positions.<br>· Local C-UAS bubble around gun areas, ammunition points and Fire Direction Centres.<br>· Collateral damage control in urban warfare scenarios.</div></section>
+<section><h2>Project Outcome</h2><div class="info-box">· A production ready, versatile Drone Catcher System for<br>Artillery Guns that meets defined performance parameters against range of target drones in field conditions.<br>· Clear roadmap for productisation, large scale induction and future technology insertion like improved AI.<br>· Documentation to include technical manuals, Interface<br>Control Documents, safety cases, support and training packages.</div></section>
+<section><h2>Expectation from Prototype</h2><div class="info-box">· Scalable across present and future C-UAS platforms.<br>· Modular design enabling future integration and improvements without extensive redesign.<br>Battery and Regiment level deployment.<br>· Demonstrated interoperability with existing artillery C2 networks and compliance with defence cyber security standards.</div></section>
+<section><h2>Testing / Certification</h2><div class="info-box">· Field trials in plains, deserts and high altitude area with live or simulated drone targets of various sizes, profiles and tactics (including swarming).<br>· Environmental testing for shock, vibration, temperature, humidity, dust and rain as per relevant JSS/ MIL standards.<br>· EMI/ EMC and safety certification as per defence norms.<br>· Cybersecurity evaluation and certification for communication links and software components.<br>· User evaluation trials with artillery units to validate operational suitability, ergonomics and maintainability.</div></section>
+<section><h2>Potential Market</h2><div class="info-box">· A production ready, versatile Drone Catcher System for<br>Artillery Guns that meets defined performance parameters against range of target drones in field conditions.<br>· Clear roadmap for productisation, large scale induction and future technology insertion like improved AI.<br>· Documentation to include technical manuals, Interface<br>Control Documents, safety cases, support and training packages.</div></section>
+<section><h2>Business Case</h2><div class="info-box">· Substantial scope of export and bulk orders if developed.</div></section>
+<section><h2>Technology Tags</h2><div class="tags"><span class="tag">AI/ML</span> <span class="tag">Drones/UAS</span> <span class="tag">Ammunition</span> <span class="tag">Electronic Warfare</span> <span class="tag">Radar/Sensors</span> <span class="tag">Robotics</span> <span class="tag">Aviation</span> <span class="tag">Cyber/Software</span> <span class="tag">Materials</span></div></section>
+<section><h2>About DISC 14</h2><p class="muted">DISC 14 is the 14th round of the Defence India Startup Challenge — iDEX&#x27;s flagship programme funding Indian startups (grant up to ₹1.5 Cr / ≈ $180K) to solve specific problem statements nominated by the Indian Army, Navy, Air Force, and Coast Guard. <a href="../#info">Read full programme terms →</a></p></section>
+  </article>
+
+  <nav class="adjacent"><a href="DISC14-19.html"><span class="nav-lbl">← Previous · DISC14-19</span>Aircrew Protection Vest: Army Aviation Pilots</a><a href="DISC14-21.html" style="text-align:right"><span class="nav-lbl">Next · DISC14-21 →</span>AI Enabled Multi Agent Module for UAS Functions</a></nav>
+
+  <footer class="botbar">
+    <a href="../">Home</a> ·
+    <a href="../sitemap.xml">Sitemap</a> ·
+    <a href="https://idex.gov.in/challenges">idex.gov.in</a> ·
+    <a href="https://github.com/Coffeemaniac/idex-challenge-navigator">Source on GitHub</a>
+  </footer>
+</main>
+</body>
+</html>

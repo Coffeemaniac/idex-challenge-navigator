@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DISC14-64 · Design and development of &quot;Canopy Lift Check Device&quot; in Fighter aircraft — DISC 14 | iDEX Challenge Navigator</title>
+<meta name="description" content="1. Measurement of canopy lift of fighter aircraft during pressurisation check is done manually by fixing graph paper at 12 points on canopy bubble. 2. Once the canopy glass lifts upon pressurisation, its corresponding movement is measured against a…">
+<meta name="keywords" content="DISC14-64, DISC 14, IAF, iDEX challenge, India defence innovation, defence startup India, Radar/Sensors, Aviation">
+<meta name="author" content="iDEX Challenge Navigator">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f5a623">
+<link rel="canonical" href="https://coffeemaniac.github.io/idex-challenge-navigator/c/DISC14-64.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://coffeemaniac.github.io/idex-challenge-navigator/c/DISC14-64.html">
+<meta property="og:title" content="DISC14-64 — Design and development of &quot;Canopy Lift Check Device&quot; in Fighter aircraft">
+<meta property="og:description" content="1. Measurement of canopy lift of fighter aircraft during pressurisation check is done manually by fixing graph paper at 12 points on canopy bubble. 2. Once the canopy glass lifts upon pressurisation, its corresponding movement is measured against a…">
+<meta property="og:site_name" content="iDEX Challenge Navigator">
+<meta property="og:locale" content="en_IN">
+<meta property="article:section" content="DISC 14">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DISC14-64 — Design and development of &quot;Canopy Lift Check Device&quot; in Fighter aircraft">
+<meta name="twitter:description" content="1. Measurement of canopy lift of fighter aircraft during pressurisation check is done manually by fixing graph paper at 12 points on canopy bubble. 2. Once the canopy glass lifts upon pressurisation, its corresponding movement is measured against a…">
+
+<!-- Breadcrumbs for rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"iDEX Challenge Navigator","item":"https://coffeemaniac.github.io/idex-challenge-navigator/"},
+    {"@type":"ListItem","position":2,"name":"DISC 14","item":"https://coffeemaniac.github.io/idex-challenge-navigator/?prog=DISC+14"},
+    {"@type":"ListItem","position":3,"name":"DISC14-64"}
+  ]
+}
+</script>
+
+<!-- CreativeWork describing this problem statement -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Design and development of \"Canopy Lift Check Device\" in Fighter aircraft",
+  "identifier": "DISC14-64",
+  "url": "https://coffeemaniac.github.io/idex-challenge-navigator/c/DISC14-64.html",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "DISC 14",
+    "url": "https://coffeemaniac.github.io/idex-challenge-navigator/"
+  },
+  "publisher": {
+    "@type": "GovernmentOrganization",
+    "name": "Innovations for Defence Excellence (iDEX), Defence Innovation Organisation, Ministry of Defence, Government of India",
+    "url": "https://idex.gov.in/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "name": "IAF"
+  },
+  "description": "1. Measurement of canopy lift of fighter aircraft during pressurisation check is done manually by fixing graph paper at 12 points on canopy bubble. 2. Once the canopy glass lifts upon pressurisation, its corresponding movement is measured against a fixed reference using the graph paper. 3. The graph paper has the least count of 1 mm (One mm). Therefore, any deviation less than 1mm cannot be ascertained accurately. Also, the inherent factor of parallax error cannot be ruled out. 1. As per the…",
+  "keywords": "Radar/Sensors, Aviation"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#080b14;--bg2:#0d1120;--bg3:#111827;--amber:#f5a623;--cyan:#00d4ff;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--border:rgba(245,166,35,.15)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Rajdhani',sans-serif;background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh;padding:2rem 1.25rem 5rem}
+main{max-width:880px;margin:0 auto}
+header.tophead{border-bottom:1px solid var(--border);padding-bottom:1.2rem;margin-bottom:2rem}
+header.tophead .crumbs{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+header.tophead .crumbs a{color:var(--amber);text-decoration:none}
+header.tophead .crumbs a:hover{text-decoration:underline}
+header.tophead h1{font-size:1.65rem;line-height:1.25;color:var(--text);margin:.3rem 0 .85rem;font-weight:600}
+.cta{display:inline-block;background:var(--amber);color:#000;font-family:'Share Tech Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;padding:10px 16px;border-radius:4px;text-decoration:none;font-weight:600;margin-top:.4rem;transition:all .15s}
+.cta:hover{background:#ffc85e;box-shadow:0 0 18px rgba(245,166,35,.5)}
+.cta-alt{display:inline-block;color:var(--cyan);font-family:'Share Tech Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;padding:10px 14px;margin-left:.5rem;text-decoration:none;border:1px solid rgba(0,212,255,.3);border-radius:4px}
+.cta-alt:hover{border-color:var(--cyan);background:rgba(0,212,255,.08)}
+.meta-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.pill{font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:3px;border:1px solid var(--border);color:var(--text2);background:var(--bg2)}
+.pill-prog{color:var(--amber);border-color:rgba(245,166,35,.4)}
+.pill-ag{color:var(--cyan);border-color:rgba(0,212,255,.3)}
+section{margin:1.3rem 0}
+section h2{font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:.55rem;padding-bottom:.35rem;border-bottom:1px solid rgba(245,166,35,.15)}
+.content-box{background:var(--bg2);border-left:2px solid var(--amber);padding:.9rem 1.1rem;border-radius:3px;color:var(--text);font-size:.97rem}
+.info-box{background:var(--bg2);padding:.8rem 1rem;border-radius:3px;color:var(--text2);font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.tag{background:rgba(0,212,255,.1);color:var(--cyan);font-family:'Share Tech Mono',monospace;font-size:.6rem;padding:3px 8px;border-radius:2px;letter-spacing:.1em;text-transform:uppercase}
+.muted{color:var(--text3);font-size:.88rem}
+.muted a{color:var(--cyan);text-decoration:none}
+.muted a:hover{text-decoration:underline}
+footer.botbar{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-family:'Share Tech Mono',monospace;font-size:.65rem;color:var(--text3);letter-spacing:.1em}
+footer.botbar a{color:var(--text2);text-decoration:none;margin:0 .4rem}
+footer.botbar a:hover{color:var(--amber)}
+nav.adjacent{display:flex;gap:.75rem;margin-top:1.5rem;flex-wrap:wrap}
+nav.adjacent a{flex:1;min-width:240px;padding:.7rem .9rem;background:var(--bg2);border:1px solid var(--border);border-radius:3px;color:var(--text2);text-decoration:none;font-size:.82rem;transition:all .15s}
+nav.adjacent a:hover{border-color:var(--amber);color:var(--text)}
+nav.adjacent .nav-lbl{display:block;font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:.2rem}
+@media (max-width:640px){header.tophead h1{font-size:1.3rem} .cta,.cta-alt{display:block;width:100%;margin:.4rem 0;text-align:center}}
+</style>
+</head>
+<body>
+<main>
+  <header class="tophead">
+    <div class="crumbs"><a href="../">iDEX Navigator</a> / DISC 14 / DISC14-64</div>
+    <h1>Design and development of &quot;Canopy Lift Check Device&quot; in Fighter aircraft</h1>
+    <a class="cta" href="../#DISC14-64">Open in full navigator →</a>
+    <a class="cta-alt" href="../">Browse all 209 challenges</a>
+  </header>
+
+  <article>
+    <div class="meta-row">
+      <span class="pill pill-prog">DISC 14</span>
+      <span class="pill pill-ag">IAF</span>
+      <span class="pill pill-id">DISC14-64</span>
+      <span class="pill pill-num">PS 64</span>
+    </div>
+<section><h2>Problem Statement</h2><div class="content-box">1. Measurement of canopy lift of fighter aircraft during pressurisation check is done manually by fixing graph paper at 12 points on canopy bubble.<br>2. Once the canopy glass lifts upon pressurisation, its corresponding movement is measured against a fixed reference using the graph paper.<br>3. The graph paper has the least count of 1 mm (One mm).<br>Therefore, any deviation less than 1mm cannot be ascertained accurately. Also, the inherent factor of parallax error cannot be ruled out.</div></section>
+<section><h2>Challenge Brief / Definition</h2><div class="content-box">1. As per the existing maintenance procedure of canopy lift check, the lift of canopy bubble is measured using the conventional graph papers fixed on the canopy front and rear glass and canopy frame (06 points on each side).<br>2. The measurement of lift is by visual inspection of the graph paper on the reference marked before the canopy pressurised and after pressurisation this canopy lift is visually checked at each points on the graph. In case of deviation of 1.5 mm from the previous value at any location in canopy is observed, it is declared unserviceable.<br>3. This visual inspection of deviation (Lift) value is prone to parallax error. Also, the least count of graph paper is 1mm. Hence, to avoid the chances of error and to have more accurate reading, a sensor based system with high precision is required.<br>4. Design, development, testing and certification of suitable sensor based device having capability to detect and measure the canopy lift upon pressurisation at multiple location (at least twelve points simultaneously) on the canopy gIass with up to 0.1 mm as least count (least count of 0.01 mm is desirable). This will help in monitoring the canopy lift very precisely and there will be no chance of parallax error. It should have: -<br>4.1 Facility to visually depict canopy lift i.e. if within limits then Green colour and if not within limit then Red colour at each measuring point.<br>4.2 Device installation and its operation should be user friendly.<br>4.3 Device mounting and measurement system should not cause any abrasions/scratches/damage to canopy bubble as well as canopy/aircraft surface.<br>4.4 The system should have facility to store at least twenty previous recordings of the lift check, aircraft wise, in order to depict the trend of the lift check.<br>4.5 Sensor should be designed in manner that. It can be mounted on the aircraft frame or kept near the aircraft.</div></section>
+<section><h2>Existing Solution</h2><div class="info-box">(if Nil</div></section>
+<section><h2>Technology Domains</h2><div class="info-box">Domain Sensors/Sustenance</div></section>
+<section><h2>Application / Use Case</h2><div class="info-box">The canopy lift jack device will be utilised for carrying out canopy assessment during pressurisation check for fighter aircraft.<br>2. Once it is proven on a particular type of aircraft, it should be customised/modified as per the requirement of other aircraft fleet also.</div></section>
+<section><h2>Project Outcome</h2><div class="info-box">Successful D&amp;D will result in a safe and more efficient means of carrying out canopy lift check in fighter aircraft.<br>during D&amp;D. (including compliance to specific Mil Stds / EMI-<br>EMC / JSS 55555 etc.)</div></section>
+<section><h2>Potential Market</h2><div class="info-box">for Present and future requirements of the products in Service (from accurately at the field units and any abnormality wrt canopy bubble/ Lavson tape can be identified easily. This should arrest the cases of canopy failure.<br>2. Will the developed product be able to strengthen the defence export of India<br>3. Fighter aircraft are being flown by other countries and issues related to canopy must be faced by those countries also. This device will assist in reducing the chances of canopy failures, and has good export potential for countries utilising similar type of aircraft.<br>Any other relevant info - Nil.</div></section>
+<section><h2>Business Case</h2><div class="info-box">(Bulk Can be adopted by other fighter fleet of IAF Can be considered for</div></section>
+<section><h2>Technology Tags</h2><div class="tags"><span class="tag">Radar/Sensors</span> <span class="tag">Aviation</span></div></section>
+<section><h2>About DISC 14</h2><p class="muted">DISC 14 is the 14th round of the Defence India Startup Challenge — iDEX&#x27;s flagship programme funding Indian startups (grant up to ₹1.5 Cr / ≈ $180K) to solve specific problem statements nominated by the Indian Army, Navy, Air Force, and Coast Guard. <a href="../#info">Read full programme terms →</a></p></section>
+  </article>
+
+  <nav class="adjacent"><a href="DISC14-63.html"><span class="nav-lbl">← Previous · DISC14-63</span>Integrated CUAS system on existing vehicle</a><a href="DISC14-65.html" style="text-align:right"><span class="nav-lbl">Next · DISC14-65 →</span>To design and develop Camouflage solution for solar panels installed at Defence Installations</a></nav>
+
+  <footer class="botbar">
+    <a href="../">Home</a> ·
+    <a href="../sitemap.xml">Sitemap</a> ·
+    <a href="https://idex.gov.in/challenges">idex.gov.in</a> ·
+    <a href="https://github.com/Coffeemaniac/idex-challenge-navigator">Source on GitHub</a>
+  </footer>
+</main>
+</body>
+</html>
